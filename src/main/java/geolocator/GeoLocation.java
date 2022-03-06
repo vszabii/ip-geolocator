@@ -1,8 +1,11 @@
 package geolocator;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 
 public class GeoLocation {
-
     private String as;
+
     private String city;
     private String country;
     private String countryCode;
@@ -15,7 +18,6 @@ public class GeoLocation {
     private String regionName;
     private String timezone;
     private String zip;
-
     public String getAs() {
         return as;
     }
@@ -118,6 +120,10 @@ public class GeoLocation {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+
+    public String toString() {
+        return ReflectionToStringBuilder.toString(this, ToStringStyle.MULTI_LINE_STYLE);
     }
 
 }
